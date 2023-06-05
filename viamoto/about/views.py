@@ -7,4 +7,4 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse('Страница о проекте')
+    return HttpResponse('О проекте')
