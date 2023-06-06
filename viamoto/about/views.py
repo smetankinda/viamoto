@@ -3,16 +3,16 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 
 
-def index(request):
+class index(TemplateView):
+    template_name = 'about/index.html'
+
+
+class about(TemplateView):
+    template_name = 'about/about.html'
+
+
+def profile(request, username):
+    # Здесь код запроса к модели и создание словаря контекста
     context = {
-        'post': 'post'
     }
-    return render(request, 'about/index.html', context)
-
-
-def about(request):
-    return HttpResponse('О проекте')
-
-
-class AboutTechView(TemplateView):
-    template_name = 'about/tech.html'
+    return render(request, 'users/profile.html', context)
