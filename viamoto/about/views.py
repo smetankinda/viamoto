@@ -4,7 +4,10 @@ from django.views.generic.base import TemplateView
 
 
 def index(request):
-    return HttpResponse('Главная страница')
+    context = {
+        'post': 'post'
+    }
+    return render(request, 'about/index.html', context)
 
 
 def about(request):
