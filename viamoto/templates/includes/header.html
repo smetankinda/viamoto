@@ -10,9 +10,9 @@
             {% with request.resolver_match.view_name as view_name %}
             <li class="nav-item">
               <a class="nav-link {% if view_name  == 'about:tech' %}active{% endif %}"
-                href="{% url 'about:tech' %}"
+                href="{% url 'about:about' %}"
               >
-                Технологии
+                О компании
               </a>
             </li>
             {% if request.user.is_authenticated %}
