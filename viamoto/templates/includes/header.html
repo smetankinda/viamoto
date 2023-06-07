@@ -1,6 +1,6 @@
     <header>
       {% load static %}
-      <nav class="navbar navbar-light" style="background-color: lightskyblue">
+      <nav class="navbar navbar-light" style="background-color: SlateBlue">
         <div class="container">
           <a class="navbar-brand" href="{% url 'about:index' %}">
             <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -12,7 +12,7 @@
               <a class="nav-link {% if view_name  == 'about:tech' %}active{% endif %}"
                 href="{% url 'about:about' %}"
               >
-                О компании
+                <span style="color:red">О компании</span>
               </a>
             </li>
             {% if request.user.is_authenticated %}
